@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kira Galliamova - Seneca Student President Candidate</title>
+  <style>
+    /* Basic Reset and Fonts */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    ul {
+      list-style: none;
+    }
+
+    /* Navigation */
+    header {
+      background: #004080;
+      color: #fff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+    }
+    .nav-links li a:hover {
+      color: #ffdd57;
+    }
+    /* Mobile menu toggle */
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+    @media(max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #004080;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      background: #f0f8ff;
+      padding: 100px 20px 60px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .hero img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 4px solid #004080;
+    }
+    .btn {
+      background: #004080;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #003366;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 20px;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #004080;
+    }
+    .content {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    .content img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+    .bullet-list {
+      margin-top: 20px;
+      text-align: left;
+    }
+    .bullet-list li {
+      margin: 10px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+    .bullet-list li::before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+      text-align: center;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .modal-content h3 {
+      margin-bottom: 15px;
+    }
+    .modal-content p {
+      margin-bottom: 20px;
+    }
+    
+    /* Footer */
+    footer {
+      background: #004080;
+      color: #fff;
+      text-align: center;
+      padding: 15px 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <h2>Kira Galliamova</h2>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#focus">Priorities</a></li>
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <h1>Hey Seneca! 👋 What's Poppin!</h1>
+    <p>I'm Kira Galliamova - your candidate for Student President (2025-2026 term).</p>
+    <p>Let's create a Seneca where everyone feels supported, included, and heard!</p>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <div class="container content">
+      <h2>About Your Candidate</h2>
+      <p>
+        As your current Student Coordinator, I understand the challenges of balancing school, work, and campus life. 
+        I've walked in your shoes - the stress of time management, job searches, and finding belonging. Now I'm ready 
+        to take student advocacy to the next level!
+      </p>
+      <!-- Add profile image here -->
+      <img src="kira-profile.jpg" alt="Kira Profile">
+    </div>
+  </section>
+
+  <!-- Focus Areas Section -->
+  <section id="focus">
+    <div class="container content">
+      <h2>My Key Priorities</h2>
+      <ul class="bullet-list">
+        <li>Boost club funding & streamline event planning</li>
+        <li>Create more on-campus job opportunities</li>
+        <li>Expand student discounts (food, transit, entertainment)</li>
+        <li>Strengthen campus inclusivity & belonging</li>
+        <li>Amplify student voices in college decisions</li>
+      </ul>
+      <!-- Add campus life image here -->
+      <img src="campus-life.jpg" alt="Campus Life">
+    </div>
+  </section>
+
+  <!-- Vision Section -->
+  <section id="vision">
+    <div class="container content">
+      <h2>Our Seneca, Our Future</h2>
+      <p>
+        Imagine a Seneca where every student feels valued and supported. A campus where clubs thrive, financial pressures 
+        are reduced, and your voice directly shapes student life. Together, we'll build a community that empowers every 
+        student to succeed - academically, professionally, and personally.
+      </p>
+      <!-- Add vision image here -->
+      <img src="seneca-future.jpg" alt="Seneca Vision">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container content">
+      <h2>Connect With Me</h2>
+      <p>Your ideas matter! Share your thoughts or questions directly.</p>
+      <form action="mailto:kira.campaign@example.com" method="post" enctype="text/plain">
+        <div style="margin-bottom: 10px;">
+          <input type="text" name="name" placeholder="Your Name" required style="padding: 10px; width: 100%;" />
+        </div>
+        <div style="margin-bottom: 10px;">
+          <input type="email" name="email" placeholder="Your Email" required style="padding: 10px; width: 100%;" />
+        </div>
+        <div style="margin-bottom: 10px;">
+          <textarea name="message" placeholder="Your Message" required style="padding: 10px; width: 100%; height: 100px;"></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Central Campus | Kira Galliamova - Presidential Candidate 2025-2026</p>
+  </footer>
+
+  <!-- JavaScript for Interactivity -->
+  <script>
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href'))
+          .scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Modal functionality
+    const modal = document.getElementById('modal');
+    const closeModal = document.getElementById('closeModal');
+
+    window.addEventListener('click', (e) => {
+      if (e.target == modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
