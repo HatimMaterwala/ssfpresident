@@ -191,6 +191,35 @@
       text-align: center;
       padding: 15px 20px;
     }
+
+    /* Facts Section */
+.facts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.fact-item {
+  background: #f0f8ff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.fact-item img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+@media(max-width: 768px) {
+  .facts-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 <body>
@@ -207,6 +236,7 @@
           <li><a href="#about">About Me</a></li>
           <li><a href="#focus">Priorities</a></li>
           <li><a href="#vision">Vision</a></li>
+          <li><a href="#facts">Fun Facts</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -264,6 +294,29 @@
     </div>
   </section>
 
+  <!-- Interesting Facts Section -->
+<section id="facts">
+  <div class="container content">
+    <h2>Interesting Facts About Me</h2>
+    <div class="facts-grid">
+      <div class="fact-item">
+        <img src="climb-challenge.jpg" alt="Toronto Climb Up Challenge">
+        <h3>Vertical Victory Champion</h3>
+        <p>In 2023, I led the SSF team at Toronto Climb Up Challenge where I scaled 144 floors in just 25 minutes - 
+          the fastest time of the day! This grueling race for United Way tested both endurance and mental toughness, 
+          and I'm proud to say we crushed our fundraising goals while breaking records.</p>
+      </div>
+      <div class="fact-item">
+        <img src="ssf-eats.jpg" alt="SSF Eats Program">
+        <h3>SSF Eats Origin Story</h3>
+        <p>The popular campus food program "SSF Eats" got its name from me! When asked to brainstorm a name that 
+          reflected both student life and nutrition, I coined this catchy phrase that's now become part of daily 
+          campus culture. From free breakfasts to affordable lunches, it's fueled thousands of students since 2022!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- Contact Section -->
   <section id="contact">
     <div class="container content">
@@ -283,6 +336,7 @@
       </form>
     </div>
   </section>
+
 
   <!-- Footer -->
   <footer>
