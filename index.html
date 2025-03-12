@@ -215,11 +215,26 @@
   margin-bottom: 15px;
 }
 
+.vote{
+  background-color: black;
+  color: white;
+  padding: .5rem;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+.vote:hover{
+  background-color: white;
+  font-weight: bolder;
+  color: black;
+}
+
 @media(max-width: 768px) {
   .facts-grid {
     grid-template-columns: 1fr;
   }
 }
+
   </style>
 </head>
 <body>
@@ -248,6 +263,7 @@
     <h1>Hey Seneca! 👋 What's Poppin!</h1>
     <p>I'm Kira Galliamova - your candidate for Student President (2025-2026 term).</p>
     <p>Let's create a Seneca where everyone feels supported, included, and heard!</p>
+    <a href="https://ssfinc.ca/elections"><button class="vote">Vote for me</button></a>
   </section>
 
   <!-- About Me Section -->
